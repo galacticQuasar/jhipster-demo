@@ -13,6 +13,8 @@
 import fs = require('fs');
 import { lighthouse, pa11y, prepareAudit } from 'cypress-audit';
 import ReportGenerator = require('lighthouse/lighthouse-core/report/report-generator');
+
+import cytask = require('@cypress/code-coverage/task');
 /**
  * @type {Cypress.PluginConfig}
  */
@@ -34,6 +36,6 @@ module.exports = (on, config) => {
     }),
     pa11y: pa11y(),
   });
-  require('@cypress/code-coverage/task')(on, config);
+  cytask(on, config);
   return config;
 };

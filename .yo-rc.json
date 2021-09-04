@@ -43,6 +43,8 @@
     "devServerPort": 4200,
     "clientPackageManager": "npm",
     "languages": ["en", "de"],
-    "cypressCoverage": true
+    "cypressCoverage": true,
+    "entities": ["Project", "Label", "Ticket"],
+    "lastLiquibaseTimestamp": 1630730287000
   }
 }
